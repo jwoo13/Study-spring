@@ -1,0 +1,27 @@
+Api란?
+네트워크에서 API는 프로그램 간에 상호작용하기 위한 매개체
+우리가 웹 사이트의 주소를 입력해서 '구글 메인 화면 보여줘'라고 요청을 처리해 결과물을 만들고
+이것을 다시 API로 전달 그러면 API는 최종 결과물을 브라우저에 보내 화면에 표시
+즉 API는 클라이언트의 요청을 서버에 잘 전달하고 , 서버의 결과물을 클라이언트에게 돌려주는 역할
+
+REST API이란?
+자원을 이름으로 구분해 자원의 상태를 주고받는 API 방식
+
+자원이란?
+가져오는 데이터를 말함
+
+REST API 규칙
+1.URL에는 동사를 쓰지말고 자원을 표시해야한다
+예) 학생중에 id가 1인 학생 정보를 가져오는 URL 설계
+./students/1 ( O )
+./get.student?student_id = 1 ( X )
+
+2.동사는 HTTP 메서드로
+HTTP 메서드는 서버에 요청을 하는 방법을 나눈 것
+주로 POST(create 만들고), GET(read 읽고), PUT(update 업데이트), DELETE(삭제)를 담당 묶어서 CRUD
+예)블로그 글 설계 
+		설명	 		        	| 	적합한 HTTP 메서드와 URL
+id가 1인 블로그 글을 죄하는 API 	|		GET/articles/1
+블로그 글을 추가하는 API	    	| 		POST/articles/1
+블로그 글을 수정하는 API	    	|		PUT/articles/1
+블로그 글을 삭제하는 API	    	|		DELETE/articles/1
